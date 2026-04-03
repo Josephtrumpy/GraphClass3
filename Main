@@ -1,0 +1,21 @@
+import java.io.*;
+import java.util.*;
+
+public Class Main
+{
+public static void main(String [] args) throws Exception
+{
+Graph g = new Graph();
+Scanner input = new Scanner(new File("graph4.txt"));
+
+while(input.hasNext())
+{
+String v1 = input.nextInt();
+String v2 = input.nextInt();
+g.addEdge(v1,v2);
+}
+input.close();
+g.printAdjacencyList();
+
+}
+}
